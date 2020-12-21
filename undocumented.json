@@ -1,0 +1,75 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/runner/work/SwiftBeanCountSheetSync/SwiftBeanCountSheetSync/Sources/SwiftBeanCountSheetSync/Downloader.swift",
+      "line": 13,
+      "symbol": "Downloader",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftBeanCountSheetSync/SwiftBeanCountSheetSync/Sources/SwiftBeanCountSheetSync/Downloader.swift",
+      "line": 15,
+      "symbol": "Downloader.start(authentication:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftBeanCountSheetSync/SwiftBeanCountSheetSync/Sources/SwiftBeanCountSheetSync/SheetParser.swift",
+      "line": 11,
+      "symbol": "SheetParserError",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftBeanCountSheetSync/SwiftBeanCountSheetSync/Sources/SwiftBeanCountSheetSync/SheetParser.swift",
+      "line": 12,
+      "symbol": "SheetParserError.missingHeader(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftBeanCountSheetSync/SwiftBeanCountSheetSync/Sources/SwiftBeanCountSheetSync/SheetParser.swift",
+      "line": 13,
+      "symbol": "SheetParserError.invalidValue(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftBeanCountSheetSync/SwiftBeanCountSheetSync/Sources/SwiftBeanCountSheetSync/SheetParser.swift",
+      "line": 14,
+      "symbol": "SheetParserError.missingValue(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftBeanCountSheetSync/SwiftBeanCountSheetSync/Sources/SwiftBeanCountSheetSync/Syncer.swift",
+      "line": 148,
+      "symbol": "Syncer",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftBeanCountSheetSync/SwiftBeanCountSheetSync/Sources/SwiftBeanCountSheetSync/Syncer.swift",
+      "line": 149,
+      "symbol": "Syncer.start(authentication:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftBeanCountSheetSync/SwiftBeanCountSheetSync/Sources/SwiftBeanCountSheetSync/Uploader.swift",
+      "line": 13,
+      "symbol": "Uploader",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftBeanCountSheetSync/SwiftBeanCountSheetSync/Sources/SwiftBeanCountSheetSync/Uploader.swift",
+      "line": 15,
+      "symbol": "Uploader.start(authentication:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/runner/work/SwiftBeanCountSheetSync/SwiftBeanCountSheetSync"
+}
