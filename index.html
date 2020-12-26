@@ -101,6 +101,50 @@
             <h1 id='swiftbeancountsheetsync' class='heading'>SwiftBeanCountSheetSync</h1>
 
 <p><a href="https://github.com/Nef10/SwiftBeanCountSheetSync/actions?query=workflow%3A%22CI%22"><img src="https://github.com/Nef10/SwiftBeanCountSheetSync/workflows/CI/badge.svg?event=push" alt="CI Status"></a> <a href="https://nef10.github.io/SwiftBeanCountSheetSync/"><img src="https://nef10.github.io/SwiftBeanCountSheetSync/badge.svg" alt="Documentation percentage"></a> <a href="https://github.com/Nef10/SwiftBeanCountSheetSync/blob/master/LICENSE"><img src="https://img.shields.io/github/license/Nef10/SwiftBeanCountSheetSync" alt="License: MIT"></a> <a href="https://github.com/Nef10/SwiftBeanCountSheetSync/releases"><img src="https://img.shields.io/github/v/release/Nef10/SwiftBeanCountSheetSync?label=SemVer&sort=semver" alt="Latest version"></a> <img src="https://img.shields.io/badge/platform-macOS-blue" alt="platforms supported: macOS"> <img src="https://img.shields.io/badge/SPM-compatible-blue" alt="SPM compatible"></p>
+<h3 id='strong-em-this-project-is-part-for-swiftbeancount-please-check-out-the-main-documentation-a-href-https-github-com-nef10-swiftbeancount-here-a-em-strong' class='heading'><strong><em>This project is part for SwiftBeanCount, please check out the main documentation <a href="https://github.com/Nef10/SwiftBeanCount">here</a>.</em></strong></h3>
+<h2 id='what' class='heading'>What</h2>
+
+<p>This library synchronizes transactions from Beancount files to a Google Sheets with shared transactions. This is helpful when you share expenses with another person who does not use beancount.</p>
+<h2 id='how-to-use' class='heading'>How to use</h2>
+
+<p>1) Create an instance of <code><a href="Classes/Uploader.html">Uploader</a></code> or <code><a href="Classes/Downloader.html">Downloader</a></code> depending on which way you want to sync, providing the HTTP URL of the Sheet as well as the file URL of the beancount file.
+2) Authenticate the user to Google via <a href="https://github.com/Nef10/GoogleAuthentication">GoogleAuthentication</a>.
+2) Call <code>start</code> on the instance you created in step 1, passing in the authentication instance from step 2.
+3) Your completion handler will get a <code><a href="Structs/SyncResult.html">SyncResult</a></code> if the sync was successful. This will include:
+    - the transactions which need to be added (to the sheet for upload or the ledger for download)
+    - parsing errors occured while reading the sheet
+    - configuration which was used for syncing</p>
+
+<p>Please check out the complete documentation <a href="https://nef10.github.io/SwiftBeanCountSheetSync/">here</a>, or have a look at the <a href="https://github.com/Nef10/SwiftBeanCountSheetSyncApp">SwiftBeanCountSheetSyncApp</a> which uses this library.</p>
+<h2 id='beancount-meta-data' class='heading'>Beancount meta data</h2>
+
+<p>The synchronization relies on meta data in your beancount file for configuration. Please add these to your beancount file.</p>
+<h3 id='general-configuration' class='heading'>General configuration</h3>
+
+<ul>
+<li><code>commoditySymbol</code>: The synchronization only works with one commodity which needs to be specified here</li>
+<li><code>account</code>: Account which is used to keep track of the balance between the people</li>
+<li><code>tag</code>: Tag which is appended to all transactions which are or should be synchronized</li>
+<li><code>name</code>: Your name - this will be used to identify the colunms of the sheet</li>
+<li><code>dateTolerance</code> Tolerance in days which will be used when checking if a transactions already exists</li>
+</ul>
+
+<p>These options are specified globally via <code>customs</code> like this (the date does not matter and will be ignored):</p>
+<pre class="highlight plaintext"><code>YYYY-MM-DD custom "sheet-sync-settings" "commoditySymbol" "CAD"
+</code></pre>
+<h3 id='account-configuration' class='heading'>Account configuration</h3>
+
+<p>You can attatch <code>sheet-sync-category</code> metadata to accounts to map categories from the sheet to accounts and vice-versa in a 1-1 relationship. This is optional, in case no mapping could be found a fallback account / an empty category will be used.</p>
+
+<p>Example:</p>
+<pre class="highlight plaintext"><code>2020-12-26 open Expenses:Communication:Internet
+  sheet-sync-category: "Internet"
+</code></pre>
+<h2 id='usage' class='heading'>Usage</h2>
+
+<p>The library supports the Swift Package Manger, so simply add a dependency in your <code>Package.swift</code>:</p>
+<pre class="highlight plaintext"><code>.package(url: "https://github.com/Nef10/SwiftBeanCountSheetSync.git", .upToNextMajor(from: "1.0.2")),
+</code></pre>
 
           </div>
         </section>
@@ -109,7 +153,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2020 <a class="link" href="https://github.com/Nef10" target="_blank" rel="external">Nef10</a>. All rights reserved. (Last updated: 2020-12-22)</p>
+      <p>&copy; 2020 <a class="link" href="https://github.com/Nef10" target="_blank" rel="external">Nef10</a>. All rights reserved. (Last updated: 2020-12-26)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
