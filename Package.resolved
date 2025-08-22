@@ -24,8 +24,8 @@
         "repositoryURL": "https://github.com/nvzqz/FileKit.git",
         "state": {
           "branch": null,
-          "revision": "826d9161b184509f80d85c28cd612d630646de98",
-          "version": "6.0.0"
+          "revision": "9006d2888025fbe893c3c396327b2fe45a8c177b",
+          "version": "6.1.0"
         }
       },
       {
@@ -62,6 +62,15 @@
           "branch": null,
           "revision": "d85964b96dbce94df961f28b996187c835089903",
           "version": "2.2.0"
+        }
+      },
+      {
+        "package": "swift-crypto",
+        "repositoryURL": "https://github.com/apple/swift-crypto.git",
+        "state": {
+          "branch": null,
+          "revision": "ddb07e896a2a8af79512543b1c7eb9797f8898a5",
+          "version": "1.1.7"
         }
       },
       {
